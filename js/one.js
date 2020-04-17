@@ -4,8 +4,8 @@
  * Update:   05/2016
  */
 
-;(function($) {
-    $.fn.neonTheme = function(options) {
+;(function ($) {
+    $.fn.neonTheme = function (options) {
         var neon = $.extend({}, $.fn.neonTheme.custom, options)
 
         /**
@@ -19,26 +19,26 @@
                 '.categories:not(.categories--carrossel) .li--0',
                 '.search__filter',
             ]
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 drop_from(drops)
             })
             $j(window)
-                .on('resizeStop', function(e) {
+                .on('resizeStop', function (e) {
                     drop_from(drops)
                 })
-                .on('scrollStop', function(e) {
+                .on('scrollStop', function (e) {
                     drop_from(drops)
                 })
         }
         if (neon.dropFrom !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 drop_from(neon.dropFrom)
             })
             $j(window)
-                .on('resizeStop', function(e) {
+                .on('resizeStop', function (e) {
                     drop_from(neon.dropFrom)
                 })
-                .on('scrollStop', function(e) {
+                .on('scrollStop', function (e) {
                     drop_from(neon.dropFrom)
                 })
         }
@@ -47,10 +47,10 @@
          * fix_IE_SVGs()
          */
         if (neon.fix_IE_SVGs !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 fix_IE_SVGs()
             })
-            $j(window).on('resizeStop', function(e) {
+            $j(window).on('resizeStop', function (e) {
                 fix_IE_SVGs()
             })
         }
@@ -59,10 +59,10 @@
          * default_categories_justify()
          */
         if (neon.default_categories_justify !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_categories_justify()
             })
-            $j(window).on('resizeStop', function(e) {
+            $j(window).on('resizeStop', function (e) {
                 default_categories_justify()
             })
         }
@@ -71,7 +71,7 @@
          * default_categories_mini()
          */
         if (neon.default_categories_mini !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_categories_mini()
             })
         }
@@ -80,7 +80,7 @@
          * default_carrossel_produtos()
          */
         if (neon.default_carrossel_produtos !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_carrossel_produtos()
             })
         }
@@ -89,7 +89,7 @@
          * fix_zoomHeader()
          */
         if (neon.fix_zoomHeader !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 fix_zoomHeader()
             })
         }
@@ -156,13 +156,13 @@
                     mode: 'html',
                 },
             }
-            $j(document).ready(function() {
+            $j(document).ready(function () {
                 addSVG(svgs)
                 addSVG(truck)
             })
         }
         if (neon.addSVG !== false) {
-            $j(document).ready(function() {
+            $j(document).ready(function () {
                 addSVG(neon.addSVG)
             })
         }
@@ -171,7 +171,7 @@
          * default_categories_carrossel()
          */
         if (neon.default_categories_carrossel !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_categories_carrossel()
             })
         }
@@ -180,7 +180,7 @@
          * default_carrossel_brands()
          */
         if (neon.default_carrossel_brands !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_carrossel_brands()
             })
         }
@@ -189,7 +189,7 @@
          * default_carrossel_jointsales()
          */
         if (neon.default_carrossel_jointsales !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_carrossel_jointsales()
             })
         }
@@ -198,7 +198,7 @@
          * fix_category_description()
          */
         if (neon.fix_category_description !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 fix_category_description()
             })
         }
@@ -207,7 +207,7 @@
          * default_tabs()
          */
         if (neon.default_tabs !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 default_tabs()
             })
         }
@@ -216,7 +216,7 @@
          * fix_address_phone()
          */
         if (neon.fix_address_phone !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 fix_address_phone()
             })
         }
@@ -225,7 +225,7 @@
          * fix_catalog_flexbox()
          */
         if (neon.fix_catalog_flexbox !== false) {
-            $j(document).ready(function(e) {
+            $j(document).ready(function (e) {
                 fix_catalog_flexbox()
             })
         }
@@ -234,7 +234,7 @@
          * orderStatus()
          */
         //if(neon.orderStatus !== false){
-        $j(document).ready(function(e) {
+        $j(document).ready(function (e) {
             orderStatus()
         })
         //}
@@ -245,12 +245,12 @@
         if (neon.m_categories !== false) {
             $j(document)
                 // observer para abrir e fechar o menu
-                .on('click', '.categories__show', function() {
+                .on('click', '.categories__show', function () {
                     var menu = $j('#' + $j(this).attr('data-menu'))
                     menu.addClass('on')
                     lockBody(true)
                 })
-                .on('click', '.categories__hide', function() {
+                .on('click', '.categories__hide', function () {
                     var menu = $j('#' + $j(this).attr('data-menu'))
                     menu.removeClass('on')
                     lockBody(false)
@@ -263,11 +263,10 @@
         if (neon.m_search !== false) {
             $j(document)
                 // observers para abrir e fechar a busca
-                .on('click', '.header .search__button', function(e) {
+                .on('click', '.header .search__button', function (e) {
                     if (
-                        $j(this)
-                            .closest('.search')
-                            .find('.search__hide').length == 0
+                        $j(this).closest('.search').find('.search__hide')
+                            .length == 0
                     ) {
                         // se não tiver sido criado o botão de fechar
                         $j(this)
@@ -279,9 +278,7 @@
                     }
                     if (
                         is568() &&
-                        !$j(this)
-                            .closest('.search')
-                            .hasClass('on')
+                        !$j(this).closest('.search').hasClass('on')
                     ) {
                         // se a tela for <= que 568px e for a primeira vez que ele é clicado
                         $j(this)
@@ -292,16 +289,14 @@
                         return false
                     } // se não for a primeira vez, ele não interrompe a ação e deixa o form ser enviado
                 })
-                .on('click', '.search__hide', function() {
-                    $j(this)
-                        .closest('.search')
-                        .removeClass('on')
+                .on('click', '.search__hide', function () {
+                    $j(this).closest('.search').removeClass('on')
                     $j(this).remove()
                 })
-                .ready(function() {
+                .ready(function () {
                     m_search()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_search()
             })
         }
@@ -312,7 +307,7 @@
         if (neon.m_filters !== false) {
             $j(window)
                 // observer para ocultar o botão de filtro ao rolar sobre o .footer-container
-                .scroll(function(e) {
+                .scroll(function (e) {
                     if (is992() && $j('.filters').length) {
                         var scrolled =
                                 $j(window).scrollTop() + $j(window).height(),
@@ -327,27 +322,19 @@
                         }
                     }
                 })
-                .on('resizeStop', function() {
+                .on('resizeStop', function () {
                     m_filters()
                 })
             $j(document)
                 // observer para mostrar e ocultar os filtros
-                .on('click', '.filters > .title', function(e) {
+                .on('click', '.filters > .title', function (e) {
                     if (is992()) {
-                        if (
-                            $j(this)
-                                .closest('.filters')
-                                .hasClass('on')
-                        ) {
-                            $j(this)
-                                .closest('.filters')
-                                .removeClass('on')
+                        if ($j(this).closest('.filters').hasClass('on')) {
+                            $j(this).closest('.filters').removeClass('on')
                             hideHeader(false)
                             lockBody(false)
                         } else {
-                            $j(this)
-                                .closest('.filters')
-                                .addClass('on')
+                            $j(this).closest('.filters').addClass('on')
                             hideHeader(true)
                             lockBody(true)
 
@@ -359,7 +346,7 @@
                         e.preventDefault()
                     }
                 })
-                .ready(function() {
+                .ready(function () {
                     m_filters()
                 })
         }
@@ -369,18 +356,15 @@
          */
         if (neon.m_myaccount !== false) {
             $j(document)
-                .on('click', '.myaccount__header', function(e) {
+                .on('click', '.myaccount__header', function (e) {
                     if (is992()) {
-                        $j(this)
-                            .parent()
-                            .addClass('on')
+                        $j(this).parent().addClass('on')
                         hideHeader(true)
                         lockBody(true)
 
                         if (
-                            $j(this)
-                                .parent()
-                                .find('.myaccount__hide').length == 0
+                            $j(this).parent().find('.myaccount__hide').length ==
+                            0
                         ) {
                             $j(this)
                                 .parent()
@@ -394,17 +378,15 @@
                         return false
                     }
                 })
-                .on('click', '.myaccount__hide', function() {
-                    $j(this)
-                        .closest('.myaccount')
-                        .removeClass('on')
+                .on('click', '.myaccount__hide', function () {
+                    $j(this).closest('.myaccount').removeClass('on')
                     hideHeader(false)
                     lockBody(false)
                 })
-                .ready(function() {
+                .ready(function () {
                     m_myaccount()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_myaccount()
             })
         }
@@ -414,18 +396,14 @@
          */
         if (neon.m_mycart !== false) {
             $j(document)
-                .on('click', '.mycart__header', function() {
+                .on('click', '.mycart__header', function () {
                     if (is992()) {
-                        $j(this)
-                            .parent()
-                            .addClass('on')
+                        $j(this).parent().addClass('on')
                         hideHeader(true)
                         lockBody(true)
 
                         if (
-                            $j(this)
-                                .parent()
-                                .find('.mycart__hide').length == 0
+                            $j(this).parent().find('.mycart__hide').length == 0
                         ) {
                             $j(this)
                                 .parent()
@@ -438,17 +416,15 @@
                         return false
                     }
                 })
-                .on('click', '.mycart__hide', function() {
-                    $j(this)
-                        .closest('.mycart')
-                        .removeClass('on')
+                .on('click', '.mycart__hide', function () {
+                    $j(this).closest('.mycart').removeClass('on')
                     hideHeader(false)
                     lockBody(false)
                 })
-                .ready(function() {
+                .ready(function () {
                     m_mycart()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_mycart()
             })
         }
@@ -458,18 +434,15 @@
          */
         if (neon.m_parcelamento !== false) {
             $j(document)
-                .on('click', '.parcelamento .title', function() {
+                .on('click', '.parcelamento .title', function () {
                     if (is992()) {
-                        $j(this)
-                            .parent()
-                            .addClass('on')
+                        $j(this).parent().addClass('on')
                         hideHeader(true)
                         lockBody(true)
 
                         if (
-                            $j(this)
-                                .next('ul')
-                                .find('.parcelamento__hide').length == 0
+                            $j(this).next('ul').find('.parcelamento__hide')
+                                .length == 0
                         ) {
                             $j(this)
                                 .next('ul')
@@ -479,19 +452,17 @@
                         }
                     }
                 })
-                .on('click', '.parcelamento__hide', function() {
+                .on('click', '.parcelamento__hide', function () {
                     if (is992()) {
-                        $j(this)
-                            .closest('.parcelamento')
-                            .removeClass('on')
+                        $j(this).closest('.parcelamento').removeClass('on')
                         hideHeader(false)
                         lockBody(false)
                     }
                 })
-                .ready(function() {
+                .ready(function () {
                     m_parcelamento()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_parcelamento()
             })
         }
@@ -501,9 +472,9 @@
          */
         if (neon.m_frete !== false) {
             $j(document)
-                .on('click', '.frete__title', function() {
+                .on('click', '.frete__title', function () {
                     if (is992()) {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             if (
                                 $j(this)
                                     .closest('.frete')
@@ -524,17 +495,15 @@
                         }, 100)
                     }
                 })
-                .on('click', '.frete__hide', function() {
-                    $j(this)
-                        .closest('.frete')
-                        .removeClass('frete--open')
+                .on('click', '.frete__hide', function () {
+                    $j(this).closest('.frete').removeClass('frete--open')
                     hideHeader(false)
                     lockBody(false)
                 })
-                .ready(function() {
+                .ready(function () {
                     m_frete()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_frete()
             })
         }
@@ -547,22 +516,14 @@
                 .on(
                     'click',
                     '.related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title, .reviews__title',
-                    function() {
+                    function () {
                         if (is568()) {
-                            if (
-                                $j(this)
-                                    .parent()
-                                    .hasClass('on')
-                            ) {
-                                $j(this)
-                                    .parent()
-                                    .removeClass('on')
+                            if ($j(this).parent().hasClass('on')) {
+                                $j(this).parent().removeClass('on')
                                 hideHeader(false)
                                 lockBody(false)
                             } else {
-                                $j(this)
-                                    .parent()
-                                    .addClass('on')
+                                $j(this).parent().addClass('on')
                                 hideHeader(true)
                                 lockBody(true)
                             }
@@ -572,19 +533,16 @@
                 .on(
                     'click',
                     '.related__hide, .recommended__hide, .whosaw__hide, .jointsales__hide, .upsell__hide, .reviews__hide',
-                    function() {
-                        $j(this)
-                            .parent()
-                            .parent()
-                            .removeClass('on')
+                    function () {
+                        $j(this).parent().parent().removeClass('on')
                         hideHeader(false)
                         lockBody(false)
                     }
                 )
-                .ready(function() {
+                .ready(function () {
                     m_produto()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_produto()
             })
         }
@@ -594,29 +552,20 @@
          */
         if (neon.m_tabs !== false) {
             $j(document)
-                .on('click', '.tabs__tab', function() {
+                .on('click', '.tabs__tab', function () {
                     if (is568()) {
-                        if (
-                            $j(this)
-                                .next('dd')
-                                .hasClass('open')
-                        ) {
-                            $j(this)
-                                .next('dd')
-                                .removeClass('open')
+                        if ($j(this).next('dd').hasClass('open')) {
+                            $j(this).next('dd').removeClass('open')
                             hideHeader(false)
                             lockBody(false)
                         } else {
-                            $j(this)
-                                .next('dd')
-                                .addClass('open')
+                            $j(this).next('dd').addClass('open')
                             hideHeader(true)
                             lockBody(true)
 
                             if (
-                                $j(this)
-                                    .next('dd')
-                                    .find('.tabs__hide').length == 0
+                                $j(this).next('dd').find('.tabs__hide')
+                                    .length == 0
                             ) {
                                 $j(this)
                                     .next('dd')
@@ -627,17 +576,15 @@
                         }
                     }
                 })
-                .on('click', '.tabs__hide', function() {
-                    $j(this)
-                        .parent()
-                        .removeClass('open')
+                .on('click', '.tabs__hide', function () {
+                    $j(this).parent().removeClass('open')
                     hideHeader(false)
                     lockBody(false)
                 })
-                .ready(function() {
+                .ready(function () {
                     m_tabs()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_tabs()
             })
         }
@@ -647,7 +594,7 @@
          */
         if (neon.m_painelCliente !== false) {
             $j(document)
-                .on('click', '.block-account .block-title', function() {
+                .on('click', '.block-account .block-title', function () {
                     if (is992()) {
                         if ($j('.block-account').hasClass('on')) {
                             $j('.block-account').removeClass('on')
@@ -660,10 +607,10 @@
                         }
                     }
                 })
-                .ready(function() {
+                .ready(function () {
                     m_painelCliente()
                 })
-            $j(window).on('resizeStop', function() {
+            $j(window).on('resizeStop', function () {
                 m_painelCliente()
             })
         }
@@ -711,31 +658,23 @@ function drop_from(dropdowns) {
     var h_middle = $j(window).width() / 2,
         v_middle = $j(window).height() / 2
 
-    $j.each(dropdowns, function(i, el) {
+    $j.each(dropdowns, function (i, el) {
         var drop = $j('' + el)
         if (drop.length) {
-            drop.each(function(i, drop) {
+            drop.each(function (i, drop) {
                 var top = $j(drop).offset().top - $j(window).scrollTop(),
                     left = $j(drop).offset().left - $j(window).scrollLeft()
 
                 if (left > h_middle) {
-                    $j(drop)
-                        .addClass('drop--right')
-                        .removeClass('drop--left')
+                    $j(drop).addClass('drop--right').removeClass('drop--left')
                 } else {
-                    $j(drop)
-                        .addClass('drop--left')
-                        .removeClass('drop--right')
+                    $j(drop).addClass('drop--left').removeClass('drop--right')
                 }
 
                 if (top > v_middle) {
-                    $j(drop)
-                        .addClass('drop--bottom')
-                        .removeClass('drop--top')
+                    $j(drop).addClass('drop--bottom').removeClass('drop--top')
                 } else {
-                    $j(drop)
-                        .addClass('drop--top')
-                        .removeClass('drop--bottom')
+                    $j(drop).addClass('drop--top').removeClass('drop--bottom')
                 }
             })
         }
@@ -748,13 +687,11 @@ function drop_from(dropdowns) {
 function fix_IE_SVGs() {
     var SVGs = $j('.pays__svg, .ships__svg, .socials__svg')
     if (SVGs.length) {
-        SVGs.each(function(i, el) {
+        SVGs.each(function (i, el) {
             var svg_class = $j(el)
                 .attr('class')
                 .replace(/light|dark|onecolor|pays__svg|\s/g, '')
-            var svgHTML = $j(el)
-                .parent()
-                .html()
+            var svgHTML = $j(el).parent().html()
             var regex = /viewBox\=[\"\'](.*?)[\"\']/g
             var viewbox = regex.exec(svgHTML)
 
@@ -768,15 +705,8 @@ function fix_IE_SVGs() {
 
                 newWidth = newWidth.toFixed(3)
 
-                if (
-                    $j(el)
-                        .parent()
-                        .find('style').length
-                ) {
-                    $j(el)
-                        .parent()
-                        .find('style')
-                        .remove()
+                if ($j(el).parent().find('style').length) {
+                    $j(el).parent().find('style').remove()
                 }
                 $j(el).after(
                     '<style>svg.pays__svg.' +
@@ -796,14 +726,14 @@ function fix_IE_SVGs() {
 function default_categories_justify() {
     var menu = $j('.categories--justify')
     if (menu.length) {
-        menu.each(function(i, menu) {
+        menu.each(function (i, menu) {
             var limit = $j('> .ul--0', menu).width(),
                 menu_id = $j(menu).attr('id'),
                 width = 0
 
             $j('> .ul--0 > .li--0', menu)
                 .removeClass('removed')
-                .each(function(i, el) {
+                .each(function (i, el) {
                     width += $j(el).width()
 
                     if (width > limit) {
@@ -822,16 +752,12 @@ function default_categories_justify() {
  */
 function default_categories_mini() {
     // menu mini
-    $j('.categories__header, .categories__close').click(function() {
+    $j('.categories__header, .categories__close').click(function () {
         if ($j('.categories__content').hasClass('open')) {
-            $j('.categories__content')
-                .first()
-                .removeClass('open')
+            $j('.categories__content').first().removeClass('open')
             lockBody(false)
         } else {
-            $j('.categories__content')
-                .first()
-                .addClass('open')
+            $j('.categories__content').first().addClass('open')
             lockBody(true)
         }
     })
@@ -857,7 +783,7 @@ function default_categories_carrossel() {
             navigation: true,
             navigationText: ['?', '?'],
             pagination: false,
-            afterInit: function() {
+            afterInit: function () {
                 menu.addClass('loaded')
             },
         })
@@ -870,12 +796,8 @@ function default_categories_carrossel() {
 function default_carrossel_produtos() {
     var carrossel = $j('.carrossel .products__list')
     if (carrossel.length) {
-        carrossel.each(function(i, el) {
-            if (
-                $j(el)
-                    .parent()
-                    .hasClass('categories__products')
-            ) {
+        carrossel.each(function (i, el) {
+            if ($j(el).parent().hasClass('categories__products')) {
                 // se for um carrossel em um menu
 
                 $j(el).owlCarousel({
@@ -884,11 +806,9 @@ function default_carrossel_produtos() {
                     autoPlay: 3000,
                     stopOnHover: true,
                     navigation: false,
-                    beforeMove: function() {
+                    beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
-                            $j(el)
-                                .find('img')
-                                .lazyload()
+                            $j(el).find('img').lazyload()
                         }
                     },
                 })
@@ -906,11 +826,9 @@ function default_carrossel_produtos() {
                         [1024, 4],
                         [1270, 5],
                     ],
-                    beforeMove: function() {
+                    beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
-                            $j(el)
-                                .find('img')
-                                .lazyload()
+                            $j(el).find('img').lazyload()
                         }
                     },
                 })
@@ -924,12 +842,12 @@ function default_carrossel_produtos() {
  */
 function fix_zoomHeader() {
     $j('.header-container').hover(
-        function() {
+        function () {
             if ($j('.zoomContainer').length) {
                 $j('.zoomContainer').hide()
             }
         },
-        function() {
+        function () {
             if ($j('.zoomContainer').length) {
                 $j('.zoomContainer').show()
             }
@@ -942,7 +860,7 @@ function fix_zoomHeader() {
  * @param elements
  */
 function addSVG(svgs) {
-    $j.each(svgs, function(svg, opt) {
+    $j.each(svgs, function (svg, opt) {
         var svg = svg,
             selector = $j(opt.selector)
 
@@ -965,7 +883,7 @@ function addSVG(svgs) {
                     svg +
                     '" /></svg>'
 
-                selector.each(function(i, el) {
+                selector.each(function (i, el) {
                     if (mode === 'prepend') {
                         $j(el).prepend(ready_svg)
                     } else if (mode === 'html') {
@@ -988,7 +906,7 @@ function default_carrossel_brands() {
     var marcas = $j('.brands--carrossel .brands__list')
 
     if (marcas.length) {
-        marcas.each(function(i, el) {
+        marcas.each(function (i, el) {
             $j(el).owlCarousel({
                 itemsScaleUp: true,
                 navigation: true,
@@ -1006,18 +924,16 @@ function default_carrossel_jointsales() {
     var jointsales = $j('.jointsales__items')
 
     if (jointsales.length) {
-        jointsales.each(function(i, el) {
+        jointsales.each(function (i, el) {
             $j(el).owlCarousel({
                 singleItem: true,
                 itemScaleUp: true,
                 navigation: true,
                 navigationText: ['?', '?'],
                 autoHeight: true,
-                beforeMove: function() {
+                beforeMove: function () {
                     if (typeof $j.fn.lazyload != 'undefined') {
-                        $j(el)
-                            .find('img')
-                            .lazyload()
+                        $j(el).find('img').lazyload()
                     }
                 },
             })
@@ -1031,9 +947,7 @@ function default_carrossel_jointsales() {
 function fix_category_description() {
     // category description
     if ($j('.category-description').length > 0 && $j('.toolbar').length > 0) {
-        $j('.toolbar')
-            .first()
-            .after($j('.category-description'))
+        $j('.toolbar').first().after($j('.category-description'))
         $j('.category-description').show()
     }
 }
@@ -1045,21 +959,15 @@ function default_tabs() {
     // tabs
     var tabs = $j('.tabs')
     if (tabs.length > 0) {
-        tabs.find('.tabs__tab')
-            .first()
-            .addClass('on')
-        tabs.find('.tabs__content')
-            .first()
-            .addClass('on')
+        tabs.find('.tabs__tab').first().addClass('on')
+        tabs.find('.tabs__content').first().addClass('on')
 
-        tabs.on('click', '.tabs__tab', function() {
+        tabs.on('click', '.tabs__tab', function () {
             if (!$j(this).hasClass('on')) {
                 tabs.find('.tabs__tab, .tabs__content').removeClass('on')
 
                 $j(this).addClass('on')
-                $j(this)
-                    .next('.tabs__content')
-                    .addClass('on')
+                $j(this).next('.tabs__content').addClass('on')
             }
         })
     }
@@ -1072,7 +980,7 @@ function fix_address_phone() {
     // address phone
     var address = $j('address')
     if (address.length > 0) {
-        address.each(function(i, el) {
+        address.each(function (i, el) {
             var html = $j(el).html(),
                 ico =
                     '<svg class="ico" viewBox="0 0 16 16"><path d="M3.7,10.2c1,2.1,2.1,3.4,3.5,4.5c2.4,1.9,3.8,1.3,5.1,0.7c1.9-0.9,1.5-1.5,0.6-3.4 c-0.9-1.9-1.3-2.5-3.2-1.6c-1.9,0.9-1.2,2.2-1.2,2.2L4.9,5.1c0,0,0.7,1.2,2.6,0.3C9.4,4.5,9.1,3.9,8.2,2C7.4,0.1,7.1-0.5,5.2,0.4 C3.9,1,2.5,1.7,2.4,4.8C2.4,6.6,2.7,8.1,3.7,10.2z"/></svg>'
@@ -1089,7 +997,7 @@ function fix_address_phone() {
 function fix_catalog_flexbox() {
     // products flex-fix
     var products = $j('.products__list:not(.carrossel)')
-    products.each(function(i, el) {
+    products.each(function (i, el) {
         $j(el).append(
             '<li class="flex-fix li--0 products__item" /><li class="flex-fix li--0 products__item" /><li class="flex-fix li--0 products__item" /><li class="flex-fix li--0 products__item" /><li class="flex-fix li--0 products__item" />'
         )
@@ -1103,14 +1011,10 @@ function orderStatus() {
     //status title
     var status = $j('.order-status')
     if (status.length > 0) {
-        status.each(function(i, el) {
-            var text = $j(el)
-                .find('span')
-                .text()
+        status.each(function (i, el) {
+            var text = $j(el).find('span').text()
             text = '<strong>' + text.replace(/\.|\!/g, '.</strong>')
-            $j(el)
-                .find('span')
-                .html(text)
+            $j(el).find('span').html(text)
         })
     }
 }
@@ -1328,7 +1232,7 @@ $j.fn.neonTheme.custom = {
     fix_catalog_flexbox: true, // adiciona elementos para arrumar o flexbox do catálogo
     /* - Responsivo */
     m_categories: true, // ativa o responsivo do Menu de Categorias
-    m_search: true, // ativa o responsivo da Busca
+    m_search: false, // ativa o responsivo da Busca
     m_filters: true, // ativa o responsivo dos Filtros do Catálogo
     m_myaccount: true, // ativa o responsivo da Minha Conta
     m_mycart: true, // ativa o responsivo do Meu Carrinho
@@ -1341,13 +1245,20 @@ $j.fn.neonTheme.custom = {
      * Funcionalidades do Tema
      */
     dropFrom: false,
-    addSVG: {
+    /* ex.: ['.header','#meu_elemento','.footer'] */
+    addSVG: false,
+    /*
+    ex.: {
         'img-truck': {
-            selector: '.frete .frete__content .input-box label',
-            mode: 'prepend',
-            ratio: false,
+            selector: '.simulador-frete .title',
+            mode: 'append',
+            ratio: false
         },
-    },
+            'ico-menu': {
+            selector: '.meu-menu-header'
+        }
+    }
+    */
 }
 
 /**
@@ -1381,86 +1292,185 @@ Para cada SVG adicionado, adicione um objeto com os parametros:
 
     {
         selector: '.header .meu_btn, .footer .meu_box'
-        string  obrigatório
-        Seletor CSS do(s) elemento(s) onde inserir o SVG
+            string  obrigatório
+            Seletor CSS do(s) elemento(s) onde inserir o SVG
 
         mode: 'append / prepend / html'
-        string  opcional    (default: append)
-        Modo de inserir o SVG, você pode optar por:
-        'append'    - modo padrão - adiciona o <svg> no fim do elemento
-        'prepend'   - adiciona o <svg> no início do elemento
-        'html'      - sobrescreve todo o conteúdo do elemento pelo <svg>
+            string  opcional    (default: append)
+            Modo de inserir o SVG, você pode optar por:
+            'append'    - modo padrão - adiciona o <svg> no fim do elemento
+            'prepend'   - adiciona o <svg> no início do elemento
+            'html'      - sobrescreve todo o conteúdo do elemento pelo <svg>
 
         ratio: true / false
-        opcional    default: true
-        Mantém ou não o ratio do SVG
-        Adicionando ou não o parâmetro: preserveAspectRatio="none"
+            opcional    default: true
+            Mantém ou não o ratio do SVG
+            Adicionando ou não o parâmetro: preserveAspectRatio="none"
     }
 }
 */
 /* end of editable */
 
-/**
- * JavaScript Geral
- * Arquivo:	general.js
- *
- * Use este editor para criar o seu Javascript
- * Este arquivo Ã© o Ãºltimo arquivo .js chamado
- *
- * jQuery       $j
- * Prototype:   $
- *
- * document.on() safe events:
- * 'resizeStop'
- * 'scrollStop'
- * 'ajaxComplete'
- */
+// scrollTop;
 function scrollTop() {
-    var currentScrolling = 0
-
-    $j(window).scroll(function() {
-        var body = $j('body')
-        var scrollTop = $j(window).scrollTop()
-        var heightHeader = $j('.header-container').outerHeight()
-
-        if (scrollTop > 0) body.addClass('scrolling')
-        else body.removeClass('scrolling')
-
-        if (scrollTop > heightHeader) {
-            if (scrollTop > currentScrolling) {
-                body.addClass('scrolling--down').removeClass('scrolling--up')
-            } else {
-                body.addClass('scrolling--up').removeClass('scrolling--down')
-            }
-            currentScrolling = scrollTop
-        } else {
-            body.removeClass('scrolling--up').removeClass('scrolling--down')
+    var l = 0,
+        o = function () {
+            var o = $j('body'),
+                s = $j(window).scrollTop(),
+                n = $j('.header-container').height()
+            !0,
+                s > n ? o.addClass('scrolling') : o.removeClass('scrolling'),
+                s < l && s > n
+                    ? o.addClass('scrolling--top')
+                    : o.removeClass('scrolling--top'),
+                s > l && s > n
+                    ? o.addClass('scrolling--down')
+                    : o.removeClass('scrolling--down'),
+                (l = s)
         }
-    })
+    $j(window).bind('scroll', o), o()
+}
+// strech;
+!(function (t) {
+    t.fn.strech = function () {
+        t(this).each(function () {
+            var s,
+                n = t(this),
+                e = n.width(),
+                i = n.html(),
+                a = t('<span class="stretch_it">' + i + '</span>'),
+                c = n.text().length,
+                h = e / c
+            if ((n.html(a), (s = a.width()) < e)) {
+                var l = s / c,
+                    r = h - l + (h - l) / c
+                a.css({ 'varter-spacing': r })
+            } else a.contents().unwrap(), n.addClass('justify')
+        })
+    }
+})(jQuery)
+// Menu Actions
+function menuActions() {
+    var e = jQuery,
+        n = e('.header-container'),
+        a = e('.header__navbar'),
+        s = e('.menu__button,.menu__close')
+    function i(a) {
+        a.hasClass('actived')
+            ? (a.removeClass('actived'),
+              n.animate({ top: 0 }),
+              e('body').css('overflow', 'visible'))
+            : (a.addClass('actived'),
+              n.animate({ top: -n.height() }),
+              e('body').css('overflow', 'hidden'))
+    }
+    e('.menu .li--0.parent').click(function (n) {
+        var a = e(n.target)
+        if (e(a).hasClass('li--0')) {
+            var s = 0
+            a.hasClass('menu--open') && (s = 1),
+                e('.menu .li--0').removeClass('menu--open'),
+                s || a.addClass('menu--open')
+        }
+    }),
+        e(document).ready(function () {
+            a.click(function (n) {
+                e(n.target).hasClass('menu') && i(a)
+            }),
+                s.click(function () {
+                    i(a)
+                })
+        })
 }
 
-$j(document)
-    .ready(function($) {
-        // document.ready
-        // Scrolling
-        scrollTop()
+;(function ($) {
+    $(document).ready(function () {
+        if ($j('.header .search__button').length && is992()) {
+            $j('.header .search__button').click(function () {
+                $j('.header .search').toggleClass('active')
+            })
+        }
 
-        // Menu Categories
-        $('.categories .parent').click(function(event) {
-            if ($(event.target).hasClass('parent')) {
-                $(event.target).toggleClass('on')
-            }
+        menuActions()
+        scrollTop()
+        $('.call-center__phone').strech()
+
+        // Brands
+        $('.brands__list').owlCarousel({
+            items: 6,
+            navigation: true,
+            pagination: false,
+            navigationText: ['?', '?'],
         })
+
+        pages.category()
+        pages.cart()
+        pages.product()
     })
-    .on('resizeStop', function(e) {
-        // Safe window.resize
-        // Dispara apÃ³s o Ãºltimo movimento de resize parar no navegador.
+
+    var pages = {
+        category: function () {
+            // Ajuste Banner Category
+            var banner = $j('.category-image')
+            var mainContainer = $j('.main-container')
+
+            if (banner && mainContainer) {
+                mainContainer.prepend(banner)
+                banner.addClass('actived')
+            }
+
+            // Ajuste Toolbar
+
+            var toolbar = $j('.col-main > .toolbar')
+            var titleCategory = $j('.category-title')
+
+            if (toolbar && titleCategory) {
+                titleCategory.append(toolbar)
+            }
+        },
+        cart: function () {
+            $j(document).on('click', '.coupon .title', function (evt) {
+                $j(this).closest('.coupon').toggleClass('actived')
+            })
+        },
+        product: function () {
+            var qtd = $('.qty-wrapper')
+            var qtdArea = $('.prod__qtde')
+
+            if (qtd && qtdArea) {
+                qtdArea.prepend(qtd)
+            }
+        },
+    }
+})($j)
+
+$j(document).ready(function () {
+    var $title = $j(
+        '<div class="informacoes-negocio page-title" style="order:1;"><h1>Informações do Negócio</h1></div>'
+    )
+    $j('.marketplace-marketplaceaccount-editprofile .fields').append($title)
+
+    var $title = $j(
+        '<div class="identidade-visual page-title" style="order:6;margin: 4rem 0 0 0;"><h1>Identidade Visual</h1></div>'
+    )
+    $j('.marketplace-marketplaceaccount-editprofile .fields').append($title)
+
+    var $title = $j(
+        '<div class="redes-sociais page-title" style="order:9;margin: 4rem 0 0 0;"><h1>Redes Sociais</h1></div>'
+    )
+    $j('.marketplace-marketplaceaccount-editprofile .fields').append($title)
+})
+
+// Categoria Adicionando atributo data-titulo
+// Insersão do Menu Configuravel
+$j(document).ready(function ($) {
+    $('.header-container .all-a--0').each(function () {
+        $(this)
+            .closest('li')
+            .find('.all-ul--1')
+            .attr('data-title', $.trim($(this).text()))
     })
-    .on('scrollStop', function(e) {
-        // Safe window.scroll
-        // Dispara apÃ³s o Ãºltimo movimento de scroll parar no navegador.
-    })
-    .on('ajaxComplete', function(resp) {
-        // Safe ajax completed
-        // Dispara apÃ³s completar com sucesso qualquer requisiÃ§Ã£o Ajax, e trÃ¡s a resposta do Ajax.
-    })
+
+    if ($('.header-container .categories').length && $('#header-menu').length)
+        $('.header-container .categories').append($('#header-menu'))
+})

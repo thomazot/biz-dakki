@@ -1,61 +1,142 @@
-@media (max-width: 992px)
-    .categories
-        .parent
+@media (min-width: 993px)
+    body:not(.scrolling)
+        .categories
             position: relative
+            display: flex
+            margin: 0 auto !important
+            padding: 0 !important
+            max-width: calc(100% - 32px)
+            width: 1140px
+            box-shadow: 800px 0 0 var(--primary), -800px 0 0 var(--primary)
 
-            > ul
+            > .ul--0
+                position: static !important
+                flex: 0 0 auto
+                max-width: none
+                width: auto
+
+            .li--0:not(.categories__all)
                 display: none
 
-            &:after
-                content: ''
+            &__all
+                --category-color: #15501F
 
-            > a
-                display: flex
-                min-height: 48px
-                justify-content: flex-start
-                align-items: center
+                &
+                    border: 0 !important
 
-            &:after
-                icon('\f054')
-                position: absolute
-                top: 0
-                right: 0
-                z-index: 10
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 48px
-                height: 48px
-                font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                &.li--0:hover .a--0
+                    background: var(--category-color) !important
 
-            &.on
-                &:after
-                    transform: rotate(90deg)
+                &:before
+                    position: fixed
+                    top: 181px
+                    left: 0
+                    visibility: hidden
+                    width: 100%
+                    height: 100%
+                    background: rgba(0, 0, 0, .5)
+                    content: ''
+                    opacity: 0
+                    transition: all .2s ease
 
-                > ul
-                    display: block
+                &:hover
+                    &:before
+                        visibility: visible
+                        opacity: 1
 
-        .all-li--0
-            padding-bottom: 0
+                .a--0
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    text-transform: none
+                    font-weight: 500
+                    font-size: 14px
 
-@media (min-width: 993px)
-    .categories
-        margin-bottom: 0 !important
-        background: none
-        flex: 1
-        min-width: 0
+                    &:before
+                        content: 'Categorias'
 
-        .a--0
-            color: var(--primary)
-            white-space: nowrap
-            font-size: 14px
-            font-weight: semibold
-            text-transform: uppercase
+                    &:after
+                        icon('\f054')
 
-        .li--0
-            order: 1
+                        margin-top: 2px
+                        margin-left: 5px
+                        font-size: 8px
+                        transform: rotate(90deg)
 
-        &__all
-            order: 2
+                    span
+                        display: none
+
+                .box--1
+                    border: 0 !important
+                    background: none
+                    box-shadow: none
+
+                .all-ul
+                    &--0
+                        display: block
+                        overflow: visible
+                        padding: 20px 0
+                        max-height: none
+                        width: 250px
+                        border-radius: 0 0 4px 4px
+                        background: var(--category-color)
+
+                    &--1
+                        position: fixed
+                        top: 0
+                        right: 0
+                        bottom: 0
+                        left: 250px
+                        display: grid
+                        visibility: hidden
+                        overflow: auto
+                        padding-top: 55px
+                        background: var(--primary-contrast)
+                        opacity: 0
+                        grid-template-columns: repeat(3, 1fr)
+
+                        &:before
+                            position: absolute
+                            top: 0
+                            left: 20px
+                            display: block
+                            padding: 20px 0 10px
+                            width: calc(100% - 40px)
+                            border-bottom: solid 1px var(--primary)
+                            color: var(--primary)
+                            content: attr(data-title)
+                            font-weight: 400
+                            font-size: 24px
+
+                .all-li
+                    &--0
+                        padding: 0
+                        min-width: 0
+                        max-width: 100%
+
+                        &:hover
+                            background: var(--primary)
+
+                            .all-ul--1
+                                visibility: visible
+                                opacity: 1
+
+                        &.parent
+                            .all-a--0:after
+                                icon('\f054')
+
+                                font-size: 8px
+
+                    &--1
+                        padding: 20px
+
+                .all-a
+                    &--0
+                        margin: 0
+                        padding: 5px 20px
+                        color: var(--primary-contrast)
+                        font-weight: regular
+                        font-size: 14px
+
+                        &:hover
+                            box-shadow: none

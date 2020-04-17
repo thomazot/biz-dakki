@@ -1,6 +1,6 @@
 {
-    "protocol": "http",
-    "host": "globalmar.loja.biz",
+    "protocol": "https",
+    "host": "marilia.dakki.com.br",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,

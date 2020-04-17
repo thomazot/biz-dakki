@@ -1,0 +1,31 @@
+#header-menu
+    display: none
+
+    .categories &
+        @media (min-width: 993px)
+            body:not(.scrolling) &
+                display: block
+
+.mymenu
+    .categories &
+        flex: 1
+        min-width: 0
+
+        .ul--0
+            display: flex
+            justify-content: space-around
+            max-width: none !important
+            width: 100% !important
+
+        .li--0
+            display: block !important
+            flex: 0 0 auto !important
+            margin: 0
+
+        .a--0
+            text-transform: none !important
+            font-weight: 500 !important
+            font-size: 14px !important
+
+            &:hover
+                background: rgba(0, 0, 0, .2) !important
