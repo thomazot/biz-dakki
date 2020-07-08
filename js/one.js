@@ -1464,6 +1464,16 @@ $j(document).ready(function () {
 // Categoria Adicionando atributo data-titulo
 // Insersão do Menu Configuravel
 $j(document).ready(function ($) {
+    /*
+     * COMMERCE - 15685
+     * Eliézer
+     */
+    if ($j('.catalog-product-view').length) {
+        $j('.catalog-product-view .add-to-cart-buttons').prepend(
+            $j('.prod__qtde .qty-wrapper')
+        )
+    }
+
     $('.header-container .all-a--0').each(function () {
         $(this)
             .closest('li')

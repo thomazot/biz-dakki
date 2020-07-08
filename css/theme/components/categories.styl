@@ -1,142 +1,21 @@
-@media (min-width: 993px)
-    body:not(.scrolling)
-        .categories
-            position: relative
-            display: flex
-            margin: 0 auto !important
-            padding: 0 !important
-            max-width: calc(100% - 32px)
-            width: 1140px
-            box-shadow: 800px 0 0 var(--primary), -800px 0 0 var(--primary)
+.header__navbar.actived
+    .categories--justify
+        .li--0
+            .a--0
+                span
+                    display: block
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
 
-            > .ul--0
-                position: static !important
-                flex: 0 0 auto
-                max-width: none
-                width: auto
+    #header-menu
+        display: block !important
 
-            .li--0:not(.categories__all)
-                display: none
+        @media (max-width: 991px)
+            margin: 0 5%
 
-            &__all
-                --category-color: #15501F
+        .ul--0
+            display: block
 
-                &
-                    border: 0 !important
-
-                &.li--0:hover .a--0
-                    background: var(--category-color) !important
-
-                &:before
-                    position: fixed
-                    top: 181px
-                    left: 0
-                    visibility: hidden
-                    width: 100%
-                    height: 100%
-                    background: rgba(0, 0, 0, .5)
-                    content: ''
-                    opacity: 0
-                    transition: all .2s ease
-
-                &:hover
-                    &:before
-                        visibility: visible
-                        opacity: 1
-
-                .a--0
-                    display: flex
-                    justify-content: flex-start
-                    align-items: center
-                    text-transform: none
-                    font-weight: 500
-                    font-size: 14px
-
-                    &:before
-                        content: 'Categorias'
-
-                    &:after
-                        icon('\f054')
-
-                        margin-top: 2px
-                        margin-left: 5px
-                        font-size: 8px
-                        transform: rotate(90deg)
-
-                    span
-                        display: none
-
-                .box--1
-                    border: 0 !important
-                    background: none
-                    box-shadow: none
-
-                .all-ul
-                    &--0
-                        display: block
-                        overflow: visible
-                        padding: 20px 0
-                        max-height: none
-                        width: 250px
-                        border-radius: 0 0 4px 4px
-                        background: var(--category-color)
-
-                    &--1
-                        position: fixed
-                        top: 0
-                        right: 0
-                        bottom: 0
-                        left: 250px
-                        display: grid
-                        visibility: hidden
-                        overflow: auto
-                        padding-top: 55px
-                        background: var(--primary-contrast)
-                        opacity: 0
-                        grid-template-columns: repeat(3, 1fr)
-
-                        &:before
-                            position: absolute
-                            top: 0
-                            left: 20px
-                            display: block
-                            padding: 20px 0 10px
-                            width: calc(100% - 40px)
-                            border-bottom: solid 1px var(--primary)
-                            color: var(--primary)
-                            content: attr(data-title)
-                            font-weight: 400
-                            font-size: 24px
-
-                .all-li
-                    &--0
-                        padding: 0
-                        min-width: 0
-                        max-width: 100%
-
-                        &:hover
-                            background: var(--primary)
-
-                            .all-ul--1
-                                visibility: visible
-                                opacity: 1
-
-                        &.parent
-                            .all-a--0:after
-                                icon('\f054')
-
-                                font-size: 8px
-
-                    &--1
-                        padding: 20px
-
-                .all-a
-                    &--0
-                        margin: 0
-                        padding: 5px 20px
-                        color: var(--primary-contrast)
-                        font-weight: regular
-                        font-size: 14px
-
-                        &:hover
-                            box-shadow: none
+        .a--0
+            font-size: 16px !important
